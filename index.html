@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator</title>
-</head>
-<script src="https://cdn.tailwindcss.com"></script>
-<body class="flex justify-center items-center h-screen bg-blue-950 text-white">
-    <div>
-        <h1 class="text-4xl">Password Generator</h1>
-        <input type="text" name="pw" id="pw" placeholder="Click on generate button">
-        <div>
-            <button class="bg-violet-600">Generate</button>
-            <button class="bg-violet-600">Copy to clipboard</button>
-        </div>
-        <div>
-            <p>Password length</p>
-            <input type="text" name="length" id="length">
-        </div>
-        <div>
-            <p>Include uppercase letters</p>
-            <input type="checkbox" name="" id="">
-        </div>
-        <div>
-            <p>Include lowercase letters</p>
-            <input type="checkbox" name="" id="">
-        </div>
-        <div>
-            <p>Include numbers</p>
-            <input type="checkbox" name="" id="">
-        </div>
-        <div>
-            <p>Include symbols</p>
-            <input type="checkbox" name="" id="">
-        </div>
-    </div>
-</body>
+      <head>
+            <meta charset="UTF-8" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0"
+            />
+            <title>Password Generator</title>
+      </head>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="script.js"></script>
+      <body
+            class="flex justify-center items-center h-screen bg-blue-950 text-white"
+      >
+            <div
+                  class="flex justify-center items-center flex-col gap-3 rounded-lg border-2 p-7 border-white w-96"
+            >
+                  <h1 class="text-3xl">Password Generator</h1>
+                  <p id="pw"
+                        class="bg-white w-full rounded px-2 py-1 text-slate-400 m-3"
+                  >
+                        click on Generate button
+                  </p>
+                  <div id="checkbox" class="hidden text-green-400 gap-2">
+                        <p>copied ✅</p>
+                  </div>
+                  <div class="flex justify-around gap-2 mx-4">
+                        <button class="bg-violet-600 px-5 py-1 rounded" onclick="start()">
+                              Generate
+                        </button>
+                        <button class="bg-violet-600 px-5 py-1 rounded" onclick="copytext()">
+                              Copy to clipboard
+                        </button>
+                  </div>
+                  <div class="mt-8">
+                        <div class="flex gap-32 items-center">
+                              <p>Password length</p>
+                              <input
+                                    class="w-20 bg-transparent border-2 border-white rounded pl-1"
+                                    type="number"
+                                    name=""
+                                    id="length"
+                                    value="12"
+                              />
+                        </div>
+                        <div class="flex justify-between items-center">
+                              <p>Include uppercase letters</p>
+                              <input type="checkbox" checked name="" id="upper" />
+                        </div>
+                        <div class="flex justify-between items-center">
+                              <p>Include lowercase letters</p>
+                              <input type="checkbox" checked name="" id="lower" />
+                        </div>
+                        <div class="flex justify-between items-center">
+                              <p>Include numbers</p>
+                              <input type="checkbox" checked name="" id="num" />
+                        </div>
+                        <div class="flex justify-between items-center">
+                              <p>Include symbols</p>
+                              <input type="checkbox" checked name="" id="special" />
+                        </div>
+                  </div>
+            </div>
+      </body>
 </html>
